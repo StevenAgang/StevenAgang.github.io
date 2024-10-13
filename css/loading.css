@@ -1,0 +1,117 @@
+#loading{
+    box-shadow: unset;
+    display: none;
+    width: 15px;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+    height: 15px;
+}
+.line{
+    position: absolute;
+    top: 0;
+    left: calc(50% - 3px / 2);
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    width: 3px;
+}
+.line::before{
+    content: '';
+    height: 22%;
+    width: 100%;
+    border-radius: calc(3px / 2);
+    background-color: black;
+    animation: pulse calc(1s) ease-in-out infinite;
+    transition: background-color 0.3s ease;
+    transform-origin: center bottom;
+}
+.line:nth-child(1){
+    transform: rotate(calc(360deg / -12 * 1));
+
+    &::before{
+        animation-delay: calc(1s / -12 * 1);
+    }
+}
+.line:nth-child(2){
+    transform: rotate(calc(360deg / -12 * 2));
+
+    &::before{
+        animation-delay: calc(1s / -12 * 2);
+    }
+}
+.line:nth-child(3){
+    transform: rotate(calc(360deg / -12 * 3));
+
+    &::before{
+        animation-delay: calc(1s / -12 * 3);
+    }
+}
+.line:nth-child(4){
+    transform: rotate(calc(360deg / -12 * 4));
+
+    &::before{
+        animation-delay: calc(1s / -12 * 4);
+    }
+}
+.line:nth-child(5){
+    transform: rotate(calc(360deg / -12 * 5));
+
+    &::before{
+        animation-delay: calc(1s / -12 * 5);
+    }
+}
+.line:nth-child(6){
+    transform: rotate(calc(360deg / -12 * 6));
+
+    &::before{
+        animation-delay: calc(1s / -12 * 6);
+    }
+}
+.line:nth-child(7){
+    transform: rotate(calc(360deg / -12 * 7));
+
+    &::before{
+        animation-delay: calc(1s / -12 * 7);
+    }
+}
+.line:nth-child(8){
+    transform: rotate(calc(360deg / -12 * 8));
+
+    &::before{
+        animation-delay: calc(1s / -12 * 8);
+    }
+}
+.line:nth-child(9){
+    transform: rotate(calc(360deg / -12 * 9));
+
+    &::before{
+        animation-delay: calc(1s / -12 * 9);
+    }
+}
+.line:nth-child(10){
+    transform: rotate(calc(360deg / -12 * 10));
+
+    &::before{
+        animation-delay: calc(1s / -12 * 10);
+    }
+}
+.line:nth-child(11){
+    transform: rotate(calc(360deg / -12 * 11));
+
+    &::before{
+        animation-delay: calc(1s / -12 * 11);
+    }
+}
+@keyframes pulse {
+    0%,
+    80%,
+    100%{
+        transform: scaleY(0.75);
+        opacity: 0;
+    }
+    20%{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}

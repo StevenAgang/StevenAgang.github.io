@@ -1,0 +1,60 @@
+@media (min-width: 640px){
+    main article{
+        grid-template-columns: auto;
+        column-gap: 2rem;
+        row-gap: 1rem;
+    }
+    main article h1{    
+       grid-column-start: 1;
+       grid-column-end: 3;
+    }
+    main #tech_container, main #cert_container{
+        grid-template-columns: auto;
+    }
+    main #tech_container h1, main #cert_container h1{
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    main #cert_container{
+       max-width: 70rem;
+    }
+    main #cert img{
+        width: 30rem;
+        margin-inline: 1rem;
+    }
+}
+@media (min-width: 800px) {
+    #pre-menu{
+        display: none !important;
+    }
+    aside{
+        display: none !important;
+    }
+    nav{
+        visibility: visible;
+    }
+    main article{
+        grid-template-columns: auto auto auto;
+        column-gap: 2rem;
+        row-gap: 1rem;
+    }
+    main article h1{    
+        grid-column-start: 1;
+        grid-column-end: 4;
+     }
+}
+@media (min-width: 1024px) {
+    main article section figcaption::-webkit-scrollbar{
+        display: none;
+    }
+    main article section figcaption.hovered::-webkit-scrollbar{
+        display: initial;
+        width: 5px;
+    }
+    main article section figcaption.hovered::-webkit-scrollbar-thumb{
+        background-color: #2C2C34;
+    }
+    main article section figcaption.leave::-webkit-scrollbar{
+       display: none;
+    }
+} 
