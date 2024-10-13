@@ -6,7 +6,7 @@ require '../PHPMailer/src/Exception.php';
 require '../PHPMailer/src/PHPMailer.php';
 require '../PHPMailer/src/SMTP.php';
 session_start();
-if(isset($_GET["name"]) && isset($_GET['email']) && isset($_GET['subject']) && isset($_GET['message'])){
+if(isset($_POST["name"]) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message'])){
     setup();
 }
 function setup(): void{
