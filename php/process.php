@@ -40,6 +40,7 @@ class Sendmail{
     public function mailbuild(): array{
         $to = $this->to;
         $from = $this->from;
+        $name = $this->name;
         $subject = $this->subject;
         $message = $this->message;
         $html = "   <!DOCTYPE html>
@@ -52,10 +53,11 @@ class Sendmail{
                         </head>
                         <body style='margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;'>
                             <header style='background-color: dimgray; padding: 1rem; width: 50%;  margin: 0 auto;'>
-                                <h1>You got new email</h1>
+                                <h1>You got new email from ". $name ." </h1>
                             </header>
                             <div style='background-color: #EFF1F3; padding: 1rem; width: 50%; margin: 0 auto;'>
-                                <p style='padding-block: 3rem; letter-spacing: 1px; word-break: break-all;'>From: ".$from."</p>
+                                <p style='letter-spacing: 1px; word-break: break-all;'>Sender Name: ".$name."</p>
+                                <p style='padding-block: 3rem; letter-spacing: 1px; word-break: break-all;'>Sender Email: ".$from."</p>
                                 <p style='text-indent: 1rem;'>".$message."</p>
                             </div>
                         </body>
