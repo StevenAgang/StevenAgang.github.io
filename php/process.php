@@ -70,8 +70,8 @@ class Sendmail{
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = TRUE;
-            $mail->Username = 'salesinventorysystem@gmail.com';
-            $mail->Password = 'dnwnxxaxozjwtiug';
+            $mail->Username = getenv('email');
+            $mail->Password = getenv('password');
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 
